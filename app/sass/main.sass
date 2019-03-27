@@ -1,0 +1,211 @@
+@import 'variables'
+
+=font-size($size)
+  font-size: $size / $font-base * 1rem
+
+::selection
+    background: rgba($dark, .2)
+    color: $dark
+    
+html, body 
+    margin: 0
+    font-size: $font-base
+    font-family: $serif
+    color: $dark
+    scroll-behavior: smooth
+
+img 
+    max-width: 100%
+
+a:focus 
+    outline-color: $light-dark
+
+span:focus 
+    outline: none
+
+.container
+    width: 1140px
+    max-width: 100%
+    margin: 0 auto
+
+.cta
+    text-decoration: none
+    +font-size(20px)
+    font-family: $sans-serif
+    color: $dark
+    &::after 
+        content: "\2192"
+        margin-left: 5px
+        transition: all .4s ease-in-out
+    &:hover
+        &::after
+            margin-left: 10px
+
+
+nav
+    +font-size(20px)
+    padding: 30px 0
+    background: $nav-bg
+    position: fixed
+    z-index: 999999
+    left: 0
+    right: 0
+    top: 0
+    a 
+        text-decoration: none
+        color: $dark
+    .logo 
+        +font-size(30px)
+        color: $dark
+        font-weight: 600
+        line-height: 30px / $font-base * 1rem
+        span 
+            color: rgba($dark, .4)
+            &::before
+                clear: both
+                content: " "
+                display: block
+    & > div
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    ul
+        li 
+            display: inline-block
+            margin-left: 25px
+
+.row
+    display: flex
+    flex-direction: row
+    @for $i from 1 through $grid-columns 
+        .col-#{$i} 
+            width: (100 / $grid-columns * $i) * 1%
+    @for $i from 1 through $grid-columns
+        .left-minus-#{$i}
+            margin-left: -(100 / $grid-columns * $i) * 1%
+
+[class*="col-"]
+    margin-left: $grid-gutter / 2
+    margin-right: $grid-gutter / 2
+.row
+    margin: 0 (1 - $grid-gutter/2)
+    [class*="col-"]:first-child
+        margin-left: 0
+    [class*="col-"]:last-child
+        margin-right: 0
+
+#welcome-image
+    background: linear-gradient(306.07deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.0001) 100%), url('../images/welcome@2x.png') center center/cover no-repeat
+    width: 100%
+    height: 90vh
+
+header
+    margin-top: 180px
+    .row 
+        align-items: flex-end
+        flex-wrap: no-wrap
+    h1 
+        margin-bottom: 150px
+        +font-size(65px)
+        color: $dark
+
+#produits-carte
+    margin-top: 80px
+    h2 
+        +font-size(20px)
+        font-family: $sans-serif
+        font-weight: 300
+        color: $light-dark
+        margin: 0
+    h3 
+        +font-size(50px)
+        margin: 10px 0
+    .row 
+        align-items: flex-end
+    .col-6:first-child
+        margin-bottom: 100px
+
+#produits-reserver
+    margin-top: 40px
+    h2 
+        +font-size(20px)
+        font-family: $sans-serif
+        font-weight: 300
+        color: $light-dark
+        margin: 0
+    h3 
+        +font-size(50px)
+        margin: 10px 0
+    .row 
+        align-items: flex-end
+        &:last-child
+            margin-top: -100px
+    .col-4:first-child
+        margin-bottom: 100px
+
+.space-between
+    justify-content: space-between
+
+.center
+    justify-content: center
+
+.over
+    position: relative
+    &::after 
+        content: " "
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        background: rgba(white, .3)
+
+#reserver
+    margin: 180px 0
+    h2 
+        text-align: center
+        +font-size(50px)
+        margin-bottom: 30px
+    .form 
+        +font-size(30px)
+        line-height: 1.5
+        font-family: $sans-serif
+        span 
+            color: $light-dark
+            border-bottom: 2px solid $light-dark
+            &::before
+                content: attr(placeholder)
+    .cta
+        +font-size(25px)
+        display: block
+        text-align: right
+        margin-top: 30px
+
+#localisation
+    #map
+        height: 80vh
+    .row
+        align-items: flex-end
+    h2 
+        +font-size(20px)
+        font-family: $sans-serif
+        font-weight: 300
+        color: $light-dark
+        margin: 0
+    h3 
+        +font-size(50px)
+        color: $dark
+        margin: 10px 0
+    .code-postal
+        +font-size(30px)
+        font-family: $serif
+        margin-top: -.3em
+    p
+        font-family: $sans-serif
+        margin-top: 0
+        margin-bottom: 1em
+        &:not(.code-postal)
+            color: $light-dark
+        &:nth-child(2)
+            margin-top: 2em
+        &:last-child 
+            margin-bottom: 100px

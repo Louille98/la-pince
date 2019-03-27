@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>La Pince à Cornichons</title>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">La Pince<span>à Cornichons</span></a>
+      <ul>
+        <li><a href="#">La carte</a></li>
+        <li><a href="#">Qui sommes-nous ?</a></li>
+        <li><a href="#">Réserver</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div id="welcome-image"></div>
+        </div>
+        <div class="col-7 left-minus-1">
+          <h1>Bienvenue à la<br/>Pince à Cornichons</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <article id="produits-carte">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2>Nos produits</h2>
+          <h3>Venez déguster de bon petits plats maison</h3>
+          <a href="#" class="cta">Voir la carte</a>
+        </div>
+        <div class="col-6">
+          <img src="images/biscottes.png" alt="Biscottes au petit-déjeuner" srcset="images/biscottes@2x.png 2x" class="over">
+        </div>
+      </div>
+    </div>
+  </article>
+  <article id="produits-reserver">
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <img src="images/bocal.png" alt="Bocal de salade" srcset="images/bocal@2x.png 2x">
+        </div>
+      </div>
+      <div class="row space-between">
+        <div class="col-4">
+            <h3>Ça vous a donné faim ?</h3>
+            <a href="#" class="cta">Réserver une table</a>
+        </div>
+        <div class="col-6">
+          <img src="images/herbes.png" alt="Herbes aromatiques sur une planche à découper" srcset="images/herbes@2x.png 2x" class="over">
+        </div>
+      </div>
+    </div>
+  </article>
+  <section id="reserver">
+    <div class="container">
+      <h2>Réserver une table</h2>
+      <div class="row center">
+        <div class="form col-8">
+            J’aimerais réserver une table pour <span contenteditable="true" placeholder="10"></span> personne(s), au nom de <span contenteditable="true">John Doe</span> pour le <span contenteditable="true">26/03/2019</span> à <span contenteditable="true">12</span>:<span contenteditable="true">30</span>. Mon numéro de téléphone est le <span contenteditable="true">07 00 00 00 00</span> et mon adresse e-mail est <span contenteditable="true">john.doe@exemple.com</span>
+            <a href="#" class="cta">Confirmer ma demande</a>
+        </div>
+      </div>
+      <div class="infos">
+
+      </div>
+    </div>
+  </section>
+  <section id="localisation">
+    <div class="container">
+      <div class="row">
+        <div class="col-7" id="map">
+        </div>
+        <div class="col-5">
+          <h2>Où nous trouver ?</h2>
+          <h3 class="col-7">20 Rue du Croissant</h3>
+          <p class="code-postal">75002 Paris</p>
+          <p>Métro 3 - 8 - 9 : Sentier - Bourse - Grands Boulevards</p>
+          <p>Bus 48 - 85 : Réaumur-Montmartre</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- build:js js/combined.js -->
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibG91aXNsZW0iLCJhIjoiY2pzZWlqMmtqMGh5bDQzbnNiYjAwdGxoZyJ9.C03EcDcdcAokD2F_7lJhgw';
+    const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/louislem/cjtojf6213w591fmrn87q59km',
+    center: [2.343553, 48.869086],
+    zoom: 16.0,
+    interactive: false
+    });
+  </script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

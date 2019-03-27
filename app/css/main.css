@@ -1,0 +1,283 @@
+::-moz-selection {
+  background: rgba(46, 46, 52, 0.2);
+  color: #2E2E34; }
+
+::selection {
+  background: rgba(46, 46, 52, 0.2);
+  color: #2E2E34; }
+
+html, body {
+  margin: 0;
+  font-size: 15px;
+  font-family: "Tiempos Headline", "Merriweather", "Times New Roman", serif;
+  color: #2E2E34;
+  scroll-behavior: smooth; }
+
+img {
+  max-width: 100%; }
+
+a:focus {
+  outline-color: #808080; }
+
+span:focus {
+  outline: none; }
+
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+.cta {
+  text-decoration: none;
+  font-size: 1.33333rem;
+  font-family: "Avenir Next", "Helvetica", Arial, sans-serif;
+  color: #2E2E34; }
+  .cta::after {
+    content: "\2192";
+    margin-left: 5px;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .cta:hover::after {
+    margin-left: 10px; }
+
+nav {
+  font-size: 1.33333rem;
+  padding: 30px 0;
+  background: white;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  right: 0;
+  top: 0; }
+  nav a {
+    text-decoration: none;
+    color: #2E2E34; }
+  nav .logo {
+    font-size: 2rem;
+    color: #2E2E34;
+    font-weight: 600;
+    line-height: 2rem; }
+    nav .logo span {
+      color: rgba(46, 46, 52, 0.4); }
+      nav .logo span::before {
+        clear: both;
+        content: " ";
+        display: block; }
+  nav > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  nav ul li {
+    display: inline-block;
+    margin-left: 25px; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .row .col-1 {
+    width: 8.33333%; }
+  .row .col-2 {
+    width: 16.66667%; }
+  .row .col-3 {
+    width: 25%; }
+  .row .col-4 {
+    width: 33.33333%; }
+  .row .col-5 {
+    width: 41.66667%; }
+  .row .col-6 {
+    width: 50%; }
+  .row .col-7 {
+    width: 58.33333%; }
+  .row .col-8 {
+    width: 66.66667%; }
+  .row .col-9 {
+    width: 75%; }
+  .row .col-10 {
+    width: 83.33333%; }
+  .row .col-11 {
+    width: 91.66667%; }
+  .row .col-12 {
+    width: 100%; }
+  .row .left-minus-1 {
+    margin-left: -8.33333%; }
+  .row .left-minus-2 {
+    margin-left: -16.66667%; }
+  .row .left-minus-3 {
+    margin-left: -25%; }
+  .row .left-minus-4 {
+    margin-left: -33.33333%; }
+  .row .left-minus-5 {
+    margin-left: -41.66667%; }
+  .row .left-minus-6 {
+    margin-left: -50%; }
+  .row .left-minus-7 {
+    margin-left: -58.33333%; }
+  .row .left-minus-8 {
+    margin-left: -66.66667%; }
+  .row .left-minus-9 {
+    margin-left: -75%; }
+  .row .left-minus-10 {
+    margin-left: -83.33333%; }
+  .row .left-minus-11 {
+    margin-left: -91.66667%; }
+  .row .left-minus-12 {
+    margin-left: -100%; }
+
+[class*="col-"] {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.row {
+  margin: 0 -9px; }
+  .row [class*="col-"]:first-child {
+    margin-left: 0; }
+  .row [class*="col-"]:last-child {
+    margin-right: 0; }
+
+#welcome-image {
+  background: -webkit-linear-gradient(143.93deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.0001) 100%), url("../images/welcome@2x.png") center center/cover no-repeat;
+  background: -o-linear-gradient(143.93deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.0001) 100%), url("../images/welcome@2x.png") center center/cover no-repeat;
+  background: linear-gradient(306.07deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.0001) 100%), url("../images/welcome@2x.png") center center/cover no-repeat;
+  width: 100%;
+  height: 90vh; }
+
+header {
+  margin-top: 180px; }
+  header .row {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap; }
+  header h1 {
+    margin-bottom: 150px;
+    font-size: 4.33333rem;
+    color: #2E2E34; }
+
+#produits-carte {
+  margin-top: 80px; }
+  #produits-carte h2 {
+    font-size: 1.33333rem;
+    font-family: "Avenir Next", "Helvetica", Arial, sans-serif;
+    font-weight: 300;
+    color: #808080;
+    margin: 0; }
+  #produits-carte h3 {
+    font-size: 3.33333rem;
+    margin: 10px 0; }
+  #produits-carte .row {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+  #produits-carte .col-6:first-child {
+    margin-bottom: 100px; }
+
+#produits-reserver {
+  margin-top: 40px; }
+  #produits-reserver h2 {
+    font-size: 1.33333rem;
+    font-family: "Avenir Next", "Helvetica", Arial, sans-serif;
+    font-weight: 300;
+    color: #808080;
+    margin: 0; }
+  #produits-reserver h3 {
+    font-size: 3.33333rem;
+    margin: 10px 0; }
+  #produits-reserver .row {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    #produits-reserver .row:last-child {
+      margin-top: -100px; }
+  #produits-reserver .col-4:first-child {
+    margin-bottom: 100px; }
+
+.space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.over {
+  position: relative; }
+  .over::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); }
+
+#reserver {
+  margin: 180px 0; }
+  #reserver h2 {
+    text-align: center;
+    font-size: 3.33333rem;
+    margin-bottom: 30px; }
+  #reserver .form {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: "Avenir Next", "Helvetica", Arial, sans-serif; }
+    #reserver .form span {
+      color: #808080;
+      border-bottom: 2px solid #808080; }
+      #reserver .form span::before {
+        content: attr(placeholder); }
+  #reserver .cta {
+    font-size: 1.66667rem;
+    display: block;
+    text-align: right;
+    margin-top: 30px; }
+
+#localisation #map {
+  height: 80vh; }
+
+#localisation .row {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+#localisation h2 {
+  font-size: 1.33333rem;
+  font-family: "Avenir Next", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  color: #808080;
+  margin: 0; }
+
+#localisation h3 {
+  font-size: 3.33333rem;
+  color: #2E2E34;
+  margin: 10px 0; }
+
+#localisation .code-postal {
+  font-size: 2rem;
+  font-family: "Tiempos Headline", "Merriweather", "Times New Roman", serif;
+  margin-top: -.3em; }
+
+#localisation p {
+  font-family: "Avenir Next", "Helvetica", Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 1em; }
+  #localisation p:not(.code-postal) {
+    color: #808080; }
+  #localisation p:nth-child(2) {
+    margin-top: 2em; }
+  #localisation p:last-child {
+    margin-bottom: 100px; }
