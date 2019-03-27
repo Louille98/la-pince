@@ -237,7 +237,7 @@ header {
     font-family: "Avenir Next", "Helvetica", Arial, sans-serif; }
     #reserver .form span {
       color: #808080;
-      border-bottom: 2px solid #808080; }
+      border-bottom: 2px solid #e6e6e6; }
       #reserver .form span::before {
         content: attr(placeholder); }
   #reserver .cta {
